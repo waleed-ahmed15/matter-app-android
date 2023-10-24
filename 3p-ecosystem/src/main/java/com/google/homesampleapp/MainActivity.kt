@@ -22,6 +22,9 @@ import androidx.databinding.DataBindingUtil.setContentView
 import com.google.homesampleapp.databinding.ActivityMainBinding
 import com.google.homesampleapp.lifecycle.AppLifecycleObserver
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Delay
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 import timber.log.Timber
 
@@ -36,6 +39,9 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     initContextDependentConstants()
+    runBlocking {
+      delay(3000)
+    }
     Timber.d("onCreate()")
 
     binding = setContentView(this, R.layout.activity_main)

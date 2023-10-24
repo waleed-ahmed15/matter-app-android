@@ -204,7 +204,7 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.core)
 
-
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
     // Hilt For instrumentation tests
     androidTestImplementation(libs.hilt.android.testing)
     kaptAndroidTest(libs.hilt.compiler)
